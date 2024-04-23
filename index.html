@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Images Aléatoires</title>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #000;
+        overflow: hidden;
+    }
+    #backgroundImg {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: blur(10px);
+        z-index: -1;
+    }
+    #randImgContainer {
+        width: 50%;
+        position: relative;
+        z-index: 1;
+    }
+    #randImg {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
+    #imageContainer {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        position: relative;
+    }
+    #byDartsgame {
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        background-color: rgba(0, 0, 0, 0.4);
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 20px;
+        font-size: 14px;
+        cursor: pointer;
+        mix-blend-mode: multiply;
+    }
+</style>
+</head>
+<body>
+<img id="backgroundImg" src="" alt="Image de fond" />
+<div id="randImgContainer">
+    <div id="imageContainer"></div>
+    <img id="randImg" src="" alt="Image Aléatoire" />
+    <button id="byDartsgame">by Dartsgame</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
